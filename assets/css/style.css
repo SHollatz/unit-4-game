@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../images/Fleur_de_givre_L.jpg");
+}
+
+h1 {
+    width: 200px;
+    height: 40px;
+    padding: 10px 0 0 0;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background-color: orange;
+}
+
+p {
+    width: 600px;
+    height: 200px;
+    padding: 10px;
+    margin: 10px;
+    line-height: 1.5;
+    color: darkgreen;
+    background-color: lightyellow;
+}
+
+#goal-and-stats {
+    width: 600px;
+    height: 100px;
+    margin: 10px;
+}
+
+#goal {
+    width: 200px;
+    height:100px;
+    background-color: lightgreen;
+    font-size: 24px;
+    float: left;
+}
+
+#stats {
+    width: 100px;
+    height: 100px;
+    margin-left: 210px;
+    padding: 10px 0 0px 10px;
+    line-height: 2;
+    background-color: lightblue;
+}
+
+#crystals {
+    width: 600px;
+    height: 80px;
+    margin: 10px;
+}
+
+#xtal1,
+#xtal2, 
+#xtal3,
+#xtal4 {
+    width:80px;
+    height: 80px;
+    background-color: white;
+}
+
+#crystal1,
+#crystal2,
+#crystal3,
+#crystal4
+ {
+    width: 50px;
+    height: 50px;
+}
+
+#total {
+    margin: 10px;
+    width: 300px;
+    height: 100px;
+}
+
+#hscore {
+    padding: 5px;
+    width: 300px;
+    height: 30px;
+    color: white;
+    background-color: darkcyan;
+    margin-bottom: 10px;
+}
+
+#score {
+    padding: 5px;
+    width: 300px;
+    height: 100px;
+    color: white;
+    background-color: darkcyan;
+}
