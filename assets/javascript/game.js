@@ -4,37 +4,39 @@ var numbers = [];
 for (var i = 19; i <= 120; i++) {
     numbers.push(i);
 }
-console.log(numbers);
+//console.log(numbers);
 var xtalNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 var xtalVal = [];
 var numWins = 0;
 var numLosses = 0;
 var compNum = numbers[Math.floor(Math.random() * numbers.length)];
 var score = 0;
-console.log("function: " + Math.floor(Math.random() * numbers.length));
-console.log("compNum: " + compNum);
+//console.log("function: " + Math.floor(Math.random() * numbers.length));
+//console.log("compNum: " + compNum);
 
 //display random number
 $('#compNum').text(compNum);
 
-console.log("xtalNumbers: " + xtalNumbers);
+//console.log("xtalNumbers: " + xtalNumbers);
 
+//sets wins, losses back to zero, empties compNum and score, initializes random numbers to crystals in range 1-12
+//and compNum to random number between 19 and 120.
 function initializer() {
     xtalVal = [];
-    $('#score, compNum').empty();
-    var compNum = numbers[Math.floor(Math.random() * numbers.length)];
+    $('#score, #compNum').empty();
+    compNum = numbers[Math.floor(Math.random() * numbers.length)];
     $('#compNum').text(compNum);
     score = 0;
     for (var i = 1; i <= 4; i++) {
         var num = xtalNumbers[Math.floor(Math.random() * (xtalNumbers.length - 1))];
-        console.log("num: " + num);
-        console.log("xtalNumbers[num]: " + xtalNumbers[num]);
+        //console.log("num: " + num);
+        //console.log("xtalNumbers[num]: " + xtalNumbers[num]);
         while (xtalVal.includes(xtalNumbers[num])) {
             num = xtalNumbers[Math.floor(Math.random() * (xtalNumbers.length - 1))];
-            console.log("inside loop, num: " + num);
+            //console.log("inside loop, num: " + num);
         }
         xtalVal.push(xtalNumbers[num]);
-        console.log("xtalVal: " + xtalVal);
+        //console.log("xtalVal: " + xtalVal);
     }
 }
 
@@ -47,32 +49,32 @@ function add(num) {
         $('#wins').text(numWins);
         initializer();
     }
-    if(score > compNum) {
+    if (score > compNum) {
         numLosses++;
         $('#losses').text(numLosses);
-        initializer()
+        initializer();
     }
 }
 
 initializer();
 
 $('#xtal1').on('click', function () {
-    console.log("xtalVal[0]: " + xtalVal[0]);
+    //console.log("xtalVal[0]: " + xtalVal[0]);
     add(xtalVal[0]);
 });
 
 $('#xtal2').on('click', function () {
-    console.log("xtalVal[1]: " + xtalVal[1]);
+    //console.log("xtalVal[1]: " + xtalVal[1]);
     add(xtalVal[1]);
 });
 
 $('#xtal3').on('click', function () {
-    console.log("xtalVal[2]: " + xtalVal[2]);
+    //console.log("xtalVal[2]: " + xtalVal[2]);
     add(xtalVal[2]);
 });
 
 $('#xtal4').on('click', function () {
-    console.log("xtalVal[3]: " + xtalVal[3]);
+    //console.log("xtalVal[3]: " + xtalVal[3]);
     add(xtalVal[3]);
 });
 
